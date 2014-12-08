@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		E91CE8561A361B6D003F9A16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91CE8551A361B6D003F9A16 /* Images.xcassets */; };
 		E91CE8591A362693003F9A16 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91CE8581A362693003F9A16 /* LoginViewController.m */; };
-		E92584891A35AAC7008DFD53 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = E92584881A35AAC7008DFD53 /* Client.m */; };
+		E91CE8641A362DE7003F9A16 /* Agent.m in Sources */ = {isa = PBXBuildFile; fileRef = E91CE85B1A362DE7003F9A16 /* Agent.m */; };
+		E91CE8651A362DE7003F9A16 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = E91CE85D1A362DE7003F9A16 /* Client.m */; };
+		E91CE8661A362DE7003F9A16 /* REA.m in Sources */ = {isa = PBXBuildFile; fileRef = E91CE85F1A362DE7003F9A16 /* REA.m */; };
+		E91CE8671A362DE7003F9A16 /* RealEstate.m in Sources */ = {isa = PBXBuildFile; fileRef = E91CE8611A362DE7003F9A16 /* RealEstate.m */; };
+		E91CE8681A362DE7003F9A16 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E91CE8631A362DE7003F9A16 /* User.m */; };
 		E92B68F51A3596E40010733A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E92B68F41A3596E40010733A /* main.m */; };
 		E92B68F81A3596E40010733A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E92B68F71A3596E40010733A /* AppDelegate.m */; };
 		E92B68FB1A3596E40010733A /* REApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E92B68F91A3596E40010733A /* REApp.xcdatamodeld */; };
@@ -17,8 +21,6 @@
 		E92B69011A3596E40010733A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92B68FF1A3596E40010733A /* Main.storyboard */; };
 		E92B69061A3596E40010733A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92B69041A3596E40010733A /* LaunchScreen.xib */; };
 		E92B69121A3596E40010733A /* REAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E92B69111A3596E40010733A /* REAppTests.m */; };
-		E9DE0B421A3597EB0088BF1F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DE0B411A3597EB0088BF1F /* User.m */; };
-		E9DE0B451A35A6110088BF1F /* Agent.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DE0B441A35A6110088BF1F /* Agent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +37,16 @@
 		E91CE8551A361B6D003F9A16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		E91CE8571A362693003F9A16 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E91CE8581A362693003F9A16 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		E92584871A35AAC7008DFD53 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
-		E92584881A35AAC7008DFD53 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
+		E91CE85A1A362DE7003F9A16 /* Agent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Agent.h; path = ../Model/Agent.h; sourceTree = "<group>"; };
+		E91CE85B1A362DE7003F9A16 /* Agent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Agent.m; path = ../Model/Agent.m; sourceTree = "<group>"; };
+		E91CE85C1A362DE7003F9A16 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = ../Model/Client.h; sourceTree = "<group>"; };
+		E91CE85D1A362DE7003F9A16 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Client.m; path = ../Model/Client.m; sourceTree = "<group>"; };
+		E91CE85E1A362DE7003F9A16 /* REA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REA.h; path = ../Model/REA.h; sourceTree = "<group>"; };
+		E91CE85F1A362DE7003F9A16 /* REA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REA.m; path = ../Model/REA.m; sourceTree = "<group>"; };
+		E91CE8601A362DE7003F9A16 /* RealEstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RealEstate.h; path = ../Model/RealEstate.h; sourceTree = "<group>"; };
+		E91CE8611A362DE7003F9A16 /* RealEstate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RealEstate.m; path = ../Model/RealEstate.m; sourceTree = "<group>"; };
+		E91CE8621A362DE7003F9A16 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../Model/User.h; sourceTree = "<group>"; };
+		E91CE8631A362DE7003F9A16 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../Model/User.m; sourceTree = "<group>"; };
 		E92B68EF1A3596E40010733A /* REApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = REApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92B68F31A3596E40010733A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E92B68F41A3596E40010733A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -50,10 +60,6 @@
 		E92B690B1A3596E40010733A /* REAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = REAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92B69101A3596E40010733A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E92B69111A3596E40010733A /* REAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REAppTests.m; sourceTree = "<group>"; };
-		E9DE0B401A3597EB0088BF1F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		E9DE0B411A3597EB0088BF1F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		E9DE0B431A35A6110088BF1F /* Agent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agent.h; sourceTree = "<group>"; };
-		E9DE0B441A35A6110088BF1F /* Agent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,12 +146,16 @@
 		E9DE0B3F1A35978A0088BF1F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E9DE0B401A3597EB0088BF1F /* User.h */,
-				E9DE0B431A35A6110088BF1F /* Agent.h */,
-				E9DE0B441A35A6110088BF1F /* Agent.m */,
-				E92584871A35AAC7008DFD53 /* Client.h */,
-				E92584881A35AAC7008DFD53 /* Client.m */,
-				E9DE0B411A3597EB0088BF1F /* User.m */,
+				E91CE85A1A362DE7003F9A16 /* Agent.h */,
+				E91CE85B1A362DE7003F9A16 /* Agent.m */,
+				E91CE85C1A362DE7003F9A16 /* Client.h */,
+				E91CE85D1A362DE7003F9A16 /* Client.m */,
+				E91CE85E1A362DE7003F9A16 /* REA.h */,
+				E91CE85F1A362DE7003F9A16 /* REA.m */,
+				E91CE8601A362DE7003F9A16 /* RealEstate.h */,
+				E91CE8611A362DE7003F9A16 /* RealEstate.m */,
+				E91CE8621A362DE7003F9A16 /* User.h */,
+				E91CE8631A362DE7003F9A16 /* User.m */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -250,14 +260,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91CE8681A362DE7003F9A16 /* User.m in Sources */,
+				E91CE8671A362DE7003F9A16 /* RealEstate.m in Sources */,
+				E91CE8661A362DE7003F9A16 /* REA.m in Sources */,
 				E91CE8591A362693003F9A16 /* LoginViewController.m in Sources */,
-				E9DE0B421A3597EB0088BF1F /* User.m in Sources */,
 				E92B68F81A3596E40010733A /* AppDelegate.m in Sources */,
 				E92B68F51A3596E40010733A /* main.m in Sources */,
-				E9DE0B451A35A6110088BF1F /* Agent.m in Sources */,
+				E91CE8641A362DE7003F9A16 /* Agent.m in Sources */,
 				E92B68FE1A3596E40010733A /* ViewController.m in Sources */,
 				E92B68FB1A3596E40010733A /* REApp.xcdatamodeld in Sources */,
-				E92584891A35AAC7008DFD53 /* Client.m in Sources */,
+				E91CE8651A362DE7003F9A16 /* Client.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
