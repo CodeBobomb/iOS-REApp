@@ -10,7 +10,7 @@
 
 @interface Agent : User
 
-
+@property NSString* test;
 @property NSDate* startedWorking;
 
 @property NSString* licenseID;
