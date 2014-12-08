@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E91CE8561A361B6D003F9A16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91CE8551A361B6D003F9A16 /* Images.xcassets */; };
+		E91CE8591A362693003F9A16 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91CE8581A362693003F9A16 /* LoginViewController.m */; };
 		E92584891A35AAC7008DFD53 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = E92584881A35AAC7008DFD53 /* Client.m */; };
 		E92B68F51A3596E40010733A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E92B68F41A3596E40010733A /* main.m */; };
 		E92B68F81A3596E40010733A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E92B68F71A3596E40010733A /* AppDelegate.m */; };
@@ -32,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		E91CE8551A361B6D003F9A16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		E91CE8571A362693003F9A16 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E91CE8581A362693003F9A16 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E92584871A35AAC7008DFD53 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		E92584881A35AAC7008DFD53 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
 		E92B68EF1A3596E40010733A /* REApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = REApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +101,8 @@
 				E92B68FC1A3596E40010733A /* ViewController.h */,
 				E92B68FD1A3596E40010733A /* ViewController.m */,
 				E92B68FF1A3596E40010733A /* Main.storyboard */,
+				E91CE8571A362693003F9A16 /* LoginViewController.h */,
+				E91CE8581A362693003F9A16 /* LoginViewController.m */,
 				E91CE8551A361B6D003F9A16 /* Images.xcassets */,
 				E92B69041A3596E40010733A /* LaunchScreen.xib */,
 				E92B68F91A3596E40010733A /* REApp.xcdatamodeld */,
@@ -245,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91CE8591A362693003F9A16 /* LoginViewController.m in Sources */,
 				E9DE0B421A3597EB0088BF1F /* User.m in Sources */,
 				E92B68F81A3596E40010733A /* AppDelegate.m in Sources */,
 				E92B68F51A3596E40010733A /* main.m in Sources */,
