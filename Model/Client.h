@@ -13,7 +13,9 @@
 @property NSDate* birthDate;
 @property NSString* email;
 @property NSString* facebook;
+@property NSString* password;
 
 -(id)initWithUser:(NSString*)User withPass:(NSString*)pass andID:(NSString*)jmbg;
+
 
 @end

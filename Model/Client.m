@@ -13,6 +13,7 @@
 -(id)initWithUser:(NSString*)user withPass:(NSString*)pass andID:(NSString*)id{
     
     self=[super initWithUser:user withPass:pass andID:id];
+    self.password= pass;
     
     return self;
 }

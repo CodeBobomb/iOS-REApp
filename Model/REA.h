@@ -18,7 +18,8 @@
 -(void)addClient:(Client*) c;
 -(void)addRealEstates:(RealEstate*) re;
 
--(Client*) findClient:(NSString*) id;
--(RealEstate*) findRealEstate:(NSString*) id;
+-(Client*) findClient:(NSString*) userID;
+-(Client*) findClientByName:(NSString*) name;	
+-(RealEstate*) findRealEstate:(NSString*) reID;
 
 @end
