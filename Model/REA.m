@@ -35,17 +35,19 @@ NSMutableArray* realestates;
 
 -(id)init{
     self=[super init];
-    clients=[NSMutableArray alloc];
-    realestates=[NSMutableArray alloc];
+    clients=[[NSMutableArray alloc] initWithCapacity:100];
+    realestates=[[NSMutableArray alloc] initWithCapacity:100];
     return self;
 }
 
 
 -(void)addClient:(Client*) c{
+    
     [clients addObject:c];
     
 }
 -(void)addRealEstates:(RealEstate*) re{
+    
     [realestates addObject:re];
 }
 
@@ -54,6 +56,16 @@ NSMutableArray* realestates;
     for(int i=0;i<[clients count];i++)
         if(((Client*)[clients objectAtIndex:i]).userID == userID)
             c=(Client*)[clients objectAtIndex:i];
+    return c;
+}
+
+-(Client*) findClientByName:(NSString*) name{
+    Client* c=nil;
+    for(int i=0;i<[clients count];i++){
+        NSString* temp=((Client*)[clients objectAtIndex:i]).user;
+        if([temp isEqual:name])
+            c=(Client*)[clients objectAtIndex:i];
+    }
     return c;
 }
 -(RealEstate*) findRealEstate:(NSString*) reID{

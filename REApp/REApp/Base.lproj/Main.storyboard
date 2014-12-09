@@ -76,18 +76,6 @@
                                     <rect key="frame" x="67" y="227" width="178" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFH-qO-AMB">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="168" y="490" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="0y8-5f-Erl" kind="show" id="V2d-zE-FgN"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -98,7 +86,6 @@
                                 <exclude reference="Jxa-iL-Yow"/>
                                 <exclude reference="MdW-Rq-umG"/>
                                 <exclude reference="KZC-Br-BJd"/>
-                                <exclude reference="WFH-qO-AMB"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -109,12 +96,13 @@
                                 <include reference="Jxa-iL-Yow"/>
                                 <include reference="MdW-Rq-umG"/>
                                 <include reference="KZC-Br-BJd"/>
-                                <include reference="WFH-qO-AMB"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="Jxa-iL-Yow" id="dPR-7q-Tyx"/>
+                        <outlet property="passwordText" destination="KZC-Br-BJd" id="qNE-Fi-MVH"/>
+                        <outlet property="usernameText" destination="MdW-Rq-umG" id="6k6-Ir-ijc"/>
                         <segue destination="qbe-fX-4Ey" kind="show" identifier="showItems" id="OXg-BO-0JM"/>
                     </connections>
                 </viewController>
@@ -166,12 +154,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ac2-c2-tL7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717" y="-83"/>
+            <point key="canvasLocation" x="816" y="265"/>
         </scene>
-        <!--Real Estate View Controller-->
+        <!--View Controller-->
         <scene sceneID="5TK-RD-IDu">
             <objects>
-                <viewController id="0y8-5f-Erl" customClass="RealEstateViewController" sceneMemberID="viewController">
+                <viewController id="0y8-5f-Erl" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oMp-ix-cHz"/>
                         <viewControllerLayoutGuide type="bottom" id="ntC-rr-ELd"/>
@@ -180,6 +168,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TestSlika" translatesAutoresizingMaskIntoConstraints="NO" id="Ydv-7I-Wmn">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="194" y="50" width="169" height="141"/>
+                                </variation>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q90-1u-3s1">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -233,59 +227,44 @@
                                     <rect key="frame" x="283" y="523" width="46" height="30"/>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAu-bR-dwv">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
-                                <state key="normal" title="More photos">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More photos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwG-oB-aIZ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="224" y="211" width="108" height="30"/>
+                                    <rect key="frame" x="231" y="199" width="122" height="21"/>
                                 </variation>
-                                <connections>
-                                    <action selector="MorePhotosClicked:" destination="0y8-5f-Erl" eventType="touchUpInside" id="NNt-8o-P67"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ydv-7I-Wmn">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="194" y="50" width="169" height="141"/>
-                                </variation>
-                            </imageView>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="Ydv-7I-Wmn"/>
                                 <exclude reference="q90-1u-3s1"/>
                                 <exclude reference="61s-uP-Fjo"/>
                                 <exclude reference="SCb-Xx-WaF"/>
                                 <exclude reference="Yzm-Kc-aJp"/>
                                 <exclude reference="IrS-H5-8GG"/>
-                                <exclude reference="XAu-bR-dwv"/>
-                                <exclude reference="Ydv-7I-Wmn"/>
+                                <exclude reference="kwG-oB-aIZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="Ydv-7I-Wmn"/>
                                 <include reference="q90-1u-3s1"/>
                                 <include reference="61s-uP-Fjo"/>
                                 <include reference="SCb-Xx-WaF"/>
                                 <include reference="Yzm-Kc-aJp"/>
                                 <include reference="IrS-H5-8GG"/>
-                                <include reference="XAu-bR-dwv"/>
-                                <include reference="Ydv-7I-Wmn"/>
+                                <include reference="kwG-oB-aIZ"/>
                             </mask>
                         </variation>
                     </view>
-                    <connections>
-                        <outlet property="MorePhotosBtn" destination="XAu-bR-dwv" id="7tV-JP-0Tg"/>
-                        <outlet property="descPic" destination="Ydv-7I-Wmn" id="sbs-cD-1bG"/>
-                        <segue destination="QGT-of-rbC" kind="show" identifier="showMorePictures" id="4Wx-NQ-9Jl"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgB-M8-oZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="239"/>
+            <point key="canvasLocation" x="1599" y="265"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HPe-43-aD1">
@@ -424,12 +403,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJN-6U-Gl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="636" y="1225"/>
+            <point key="canvasLocation" x="816" y="974"/>
         </scene>
-        <!--More Photos View Controller-->
+        <!--View Controller-->
         <scene sceneID="HXE-kS-vyN">
             <objects>
-                <viewController id="QGT-of-rbC" customClass="MorePhotosViewController" sceneMemberID="viewController">
+                <viewController id="QGT-of-rbC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Ny-hC-6gx"/>
                         <viewControllerLayoutGuide type="bottom" id="GeD-sD-ru2"/>
@@ -477,15 +456,6 @@
                                             <rect key="frame" x="20" y="61" width="348" height="425"/>
                                         </variation>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBr-Sv-AWW">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="137" y="556" width="42" height="21"/>
-                                        </variation>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="default">
@@ -494,7 +464,6 @@
                                         <exclude reference="kDQ-8X-sKg"/>
                                         <exclude reference="SQH-AW-AIB"/>
                                         <exclude reference="4TI-Q0-g6h"/>
-                                        <exclude reference="bBr-Sv-AWW"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -504,7 +473,6 @@
                                         <include reference="kDQ-8X-sKg"/>
                                         <include reference="SQH-AW-AIB"/>
                                         <include reference="4TI-Q0-g6h"/>
-                                        <include reference="bBr-Sv-AWW"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -521,23 +489,16 @@
                             </mask>
                         </variation>
                     </view>
-                    <connections>
-                        <outlet property="bigPicture" destination="4TI-Q0-g6h" id="fAi-P3-Qvb"/>
-                        <outlet property="nextPicBtn" destination="T9g-fr-KaF" id="Edy-gm-bJg"/>
-                        <outlet property="prevPicBtn" destination="kDQ-8X-sKg" id="JAF-SX-Hcy"/>
-                        <outlet property="testLabel" destination="bBr-Sv-AWW" id="Pf2-W8-l7W"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WrQ-TU-j5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1491" y="1170"/>
+            <point key="canvasLocation" x="1599" y="969"/>
         </scene>
     </scenes>
     <resources>
         <image name="TestSlika" width="424" height="283"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cYA-yZ-YP9"/>
-        <segue reference="5bD-QL-kXF"/>
+        <segue reference="OXg-BO-0JM"/>
     </inferredMetricsTieBreakers>
 </document>
