@@ -7,6 +7,7 @@
 //
 
 #import "MorePhotosViewController.h"
+#import "REA.h"
 
 @interface MorePhotosViewController ()
 
@@ -17,12 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.testLabel.text = self.raID;
-    /*    NSArray *cellImageViews;
-      for(int imageCounter = 1; ra.pics.count ;imageCounter++)
-     {
-     [[cellImageViews objectAtIndex:imageCounter-1] setImage:[UIImage imageNamed:[NSString stringWithFormat:@"testImg%d", imageCounter]]];
-     }*/
+    REA *r = [REA initREA];
+ //   RealEstate *ra = [r findRealEstate:self.raID];
+    NSArray *tempImgs = [[NSArray alloc ] initWithObjects: @"img1.png", @"img2.png", @"img3.png", nil];
+    self.bigPicture.image = [UIImage imageNamed:[tempImgs objectAtIndex:0]];
+    self.currentImgIndeks = 0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,9 +30,29 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (void) setRaID:(NSString *)raID {
+- (IBAction)nextBtnClick:(id)sender {
     
+    NSArray *tempImgs = [[NSArray alloc ] initWithObjects: @"img1.png", @"img2.png", @"img3.jpg", nil];
+    NSInteger nextIndex = (self.currentImgIndeks + 1) % tempImgs.count;
+    self.bigPicture.image = [UIImage imageNamed:[tempImgs objectAtIndex:nextIndex] ];
+    self.currentImgIndeks = nextIndex;
+}
+- (IBAction)prevBtnClick:(id)sender {
+    //tempImgs = ra.pics
+    NSArray *tempImgs = [[NSArray alloc ] initWithObjects: @"img1.png", @"img2.png", @"img3.jpg", nil];
+    NSInteger nextIndex = (self.currentImgIndeks - 1) % tempImgs.count;
+    if (self.currentImgIndeks == 1) {
+        nextIndex = 0;
+    }
+    if (self.currentImgIndeks == 0) {
+        nextIndex = tempImgs.count -1;
+    }
+    self.bigPicture.image = [UIImage imageNamed:[tempImgs objectAtIndex:nextIndex] ];
+    self.currentImgIndeks = nextIndex;
+}
+
+- (void) mysetRAID:(NSString *)temp {
+    self.raID = temp;
 }
 /*
 #pragma mark - Navigation

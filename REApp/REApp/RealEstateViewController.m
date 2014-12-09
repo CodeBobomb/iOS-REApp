@@ -42,10 +42,9 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqual: @"showItems"]) {
+    if ([[segue identifier] isEqual: @"showMorePictures"]) {
         MorePhotosViewController *controller = (MorePhotosViewController*)[segue destinationViewController];
-        //controller.raID = self.raID;
-        controller.raID = @"Test";
+        [controller mysetRAID:@"test123"]; //self.raID
     }
 }
 
