@@ -85,18 +85,6 @@
                                     <rect key="frame" x="108" y="305" width="178" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UK-cg-C3H">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="305" y="285" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="qbe-fX-4Ey" kind="show" id="7kA-zJ-XeT"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -108,7 +96,6 @@
                                 <exclude reference="Jxa-iL-Yow"/>
                                 <exclude reference="MdW-Rq-umG"/>
                                 <exclude reference="KZC-Br-BJd"/>
-                                <exclude reference="8UK-cg-C3H"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -120,7 +107,6 @@
                                 <include reference="Jxa-iL-Yow"/>
                                 <include reference="MdW-Rq-umG"/>
                                 <include reference="KZC-Br-BJd"/>
-                                <include reference="8UK-cg-C3H"/>
                             </mask>
                         </variation>
                     </view>
@@ -525,6 +511,6 @@
         <image name="back.jpg" width="2560" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5bD-QL-kXF"/>
+        <segue reference="OXg-BO-0JM"/>
     </inferredMetricsTieBreakers>
 </document>
