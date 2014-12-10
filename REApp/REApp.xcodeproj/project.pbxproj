@@ -20,6 +20,7 @@
 		E92B68FB1A3596E40010733A /* REApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E92B68F91A3596E40010733A /* REApp.xcdatamodeld */; };
 		E92B68FE1A3596E40010733A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92B68FD1A3596E40010733A /* ViewController.m */; };
 		E92B69121A3596E40010733A /* REAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E92B69111A3596E40010733A /* REAppTests.m */; };
+		E946B43E1A38C54B007BBF62 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E946B43D1A38C54B007BBF62 /* SignUpViewController.m */; };
 		E9C426F01A376E1300881577 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C426EF1A376E1300881577 /* img1.png */; };
 		E9C426F31A377C7500881577 /* img2.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C426F11A377C7500881577 /* img2.png */; };
 		E9C426F41A377C7500881577 /* img3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9C426F21A377C7500881577 /* img3.jpg */; };
@@ -64,6 +65,8 @@
 		E92B690B1A3596E40010733A /* REAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = REAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92B69101A3596E40010733A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E92B69111A3596E40010733A /* REAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REAppTests.m; sourceTree = "<group>"; };
+		E946B43C1A38C54B007BBF62 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpViewController.h; path = ../SignUpViewController.h; sourceTree = "<group>"; };
+		E946B43D1A38C54B007BBF62 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewController.m; path = ../SignUpViewController.m; sourceTree = "<group>"; };
 		E9C426EF1A376E1300881577 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img1.png; path = ../img1.png; sourceTree = "<group>"; };
 		E9C426F11A377C7500881577 /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img2.png; path = ../img2.png; sourceTree = "<group>"; };
 		E9C426F21A377C7500881577 /* img3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = img3.jpg; path = ../img3.jpg; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 				E9FC8B491A38CB9200EBE869 /* ListTableViewController.h */,
 				E9FC8B4A1A38CB9200EBE869 /* ListTableViewController.m */,
 				20F46EF71A38C2480098B852 /* Main.storyboard */,
+				E96A422A1A38C9BA007B49FF /* back.jpg */,
 				E9C426F11A377C7500881577 /* img2.png */,
 				E9C426F21A377C7500881577 /* img3.jpg */,
 				E9C426EF1A376E1300881577 /* img1.png */,
@@ -125,6 +129,8 @@
 				E92B68F71A3596E40010733A /* AppDelegate.m */,
 				E92B68FC1A3596E40010733A /* ViewController.h */,
 				E92B68FD1A3596E40010733A /* ViewController.m */,
+				E946B43C1A38C54B007BBF62 /* SignUpViewController.h */,
+				E946B43D1A38C54B007BBF62 /* SignUpViewController.m */,
 				E91CE8571A362693003F9A16 /* LoginViewController.h */,
 				E91CE8581A362693003F9A16 /* LoginViewController.m */,
 				E91CE8551A361B6D003F9A16 /* Images.xcassets */,
@@ -262,6 +268,7 @@
 				20F46EF91A38C2480098B852 /* Main.storyboard in Resources */,
 				E9C426F41A377C7500881577 /* img3.jpg in Resources */,
 				E9C426F31A377C7500881577 /* img2.png in Resources */,
+				E96A422B1A38C9BA007B49FF /* back.jpg in Resources */,
 				E9C426F01A376E1300881577 /* img1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +298,7 @@
 				E9FC8B4E1A38D04100EBE869 /* MorePhotosViewController.m in Sources */,
 				E92B68FE1A3596E40010733A /* ViewController.m in Sources */,
 				E92B68FB1A3596E40010733A /* REApp.xcdatamodeld in Sources */,
+				E946B43E1A38C54B007BBF62 /* SignUpViewController.m in Sources */,
 				E91CE8651A362DE7003F9A16 /* Client.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
