@@ -23,7 +23,8 @@
 		E9C426F01A376E1300881577 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C426EF1A376E1300881577 /* img1.png */; };
 		E9C426F31A377C7500881577 /* img2.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C426F11A377C7500881577 /* img2.png */; };
 		E9C426F41A377C7500881577 /* img3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9C426F21A377C7500881577 /* img3.jpg */; };
-		E9FC8B451A38BE4700EBE869 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FC8B441A38BE4700EBE869 /* ListTableViewController.m */; };
+		E9FC8B4B1A38CB9200EBE869 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FC8B4A1A38CB9200EBE869 /* ListTableViewController.m */; };
+		E9FC8B4E1A38D04100EBE869 /* MorePhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FC8B4D1A38D04100EBE869 /* MorePhotosViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +67,10 @@
 		E9C426EF1A376E1300881577 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img1.png; path = ../img1.png; sourceTree = "<group>"; };
 		E9C426F11A377C7500881577 /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img2.png; path = ../img2.png; sourceTree = "<group>"; };
 		E9C426F21A377C7500881577 /* img3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = img3.jpg; path = ../img3.jpg; sourceTree = "<group>"; };
-		E9FC8B431A38BE4700EBE869 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
-		E9FC8B441A38BE4700EBE869 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
+		E9FC8B491A38CB9200EBE869 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		E9FC8B4A1A38CB9200EBE869 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
+		E9FC8B4C1A38D04100EBE869 /* MorePhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorePhotosViewController.h; sourceTree = "<group>"; };
+		E9FC8B4D1A38D04100EBE869 /* MorePhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorePhotosViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,10 @@
 		E92B68E61A3596E40010733A = {
 			isa = PBXGroup;
 			children = (
+				E9FC8B4C1A38D04100EBE869 /* MorePhotosViewController.h */,
+				E9FC8B4D1A38D04100EBE869 /* MorePhotosViewController.m */,
+				E9FC8B491A38CB9200EBE869 /* ListTableViewController.h */,
+				E9FC8B4A1A38CB9200EBE869 /* ListTableViewController.m */,
 				20F46EF71A38C2480098B852 /* Main.storyboard */,
 				E9C426F11A377C7500881577 /* img2.png */,
 				E9C426F21A377C7500881577 /* img3.jpg */,
@@ -124,8 +131,6 @@
 				E92B69041A3596E40010733A /* LaunchScreen.xib */,
 				E92B68F91A3596E40010733A /* REApp.xcdatamodeld */,
 				E92B68F21A3596E40010733A /* Supporting Files */,
-				E9FC8B431A38BE4700EBE869 /* ListTableViewController.h */,
-				E9FC8B441A38BE4700EBE869 /* ListTableViewController.m */,
 			);
 			path = REApp;
 			sourceTree = "<group>";
@@ -278,11 +283,12 @@
 				E91CE8681A362DE7003F9A16 /* User.m in Sources */,
 				E91CE8671A362DE7003F9A16 /* RealEstate.m in Sources */,
 				E91CE8661A362DE7003F9A16 /* REA.m in Sources */,
-				E9FC8B451A38BE4700EBE869 /* ListTableViewController.m in Sources */,
+				E9FC8B4B1A38CB9200EBE869 /* ListTableViewController.m in Sources */,
 				E91CE8591A362693003F9A16 /* LoginViewController.m in Sources */,
 				E92B68F81A3596E40010733A /* AppDelegate.m in Sources */,
 				E92B68F51A3596E40010733A /* main.m in Sources */,
 				E91CE8641A362DE7003F9A16 /* Agent.m in Sources */,
+				E9FC8B4E1A38D04100EBE869 /* MorePhotosViewController.m in Sources */,
 				E92B68FE1A3596E40010733A /* ViewController.m in Sources */,
 				E92B68FB1A3596E40010733A /* REApp.xcdatamodeld in Sources */,
 				E91CE8651A362DE7003F9A16 /* Client.m in Sources */,

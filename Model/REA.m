@@ -37,25 +37,27 @@ NSMutableArray* realestates;
     self=[super init];
     clients=[[NSMutableArray alloc] initWithCapacity:100];
     realestates=[[NSMutableArray alloc] initWithCapacity:100];
+    reSize=0;
+    clientSize=0;
     return self;
 }
 
 
 -(void)addClient:(Client*) c{
-    
+    clientSize++;
     [clients addObject:c];
     
 }
 
 -(NSInteger) numberOfRe{
-    return [realestates count];
+    return reSize;
 }
 -(NSInteger) numberOfClients{
-    return [clients count];
+    return clientSize;
 }
 
 -(void)addRealEstates:(RealEstate*) re{
-    
+    reSize++;
     [realestates addObject:re];
 }
 
