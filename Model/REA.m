@@ -46,6 +46,14 @@ NSMutableArray* realestates;
     [clients addObject:c];
     
 }
+
+-(NSInteger) numberOfRe{
+    return [realestates count];
+}
+-(NSInteger) numberOfClients{
+    return [clients count];
+}
+
 -(void)addRealEstates:(RealEstate*) re{
     
     [realestates addObject:re];

@@ -22,4 +22,7 @@
 -(Client*) findClientByName:(NSString*) name;	
 -(RealEstate*) findRealEstate:(NSString*) reID;
 
+-(NSInteger) numberOfRe;
+-(NSInteger) numberOfClients;
+
 @end
