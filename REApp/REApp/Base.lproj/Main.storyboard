@@ -16,11 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CkL-gT-fGA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pozadinska.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ge7-hn-u1O">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="tintColor" red="0.043137256056070328" green="0.086274512112140656" blue="0.9647059440612793" alpha="1" colorSpace="deviceRGB"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-16" y="0.0" width="423" height="600"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="607"/>
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aon-nn-3v8">
@@ -89,7 +88,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="CkL-gT-fGA"/>
+                                <exclude reference="ge7-hn-u1O"/>
                                 <exclude reference="Aon-nn-3v8"/>
                                 <exclude reference="Nka-tg-nfZ"/>
                                 <exclude reference="xsf-po-KZu"/>
@@ -100,7 +99,7 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="CkL-gT-fGA"/>
+                                <include reference="ge7-hn-u1O"/>
                                 <include reference="Aon-nn-3v8"/>
                                 <include reference="Nka-tg-nfZ"/>
                                 <include reference="xsf-po-KZu"/>
@@ -508,7 +507,7 @@
     </scenes>
     <resources>
         <image name="TestSlika" width="424" height="283"/>
-        <image name="back.jpg" width="2560" height="1600"/>
+        <image name="pozadinska.jpg" width="2560" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OXg-BO-0JM"/>
