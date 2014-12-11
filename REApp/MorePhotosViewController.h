@@ -12,11 +12,11 @@
 @interface MorePhotosViewController : UIViewController
 
 @property NSString *raID;
+@property (weak, nonatomic) IBOutlet UIImageView *bigPicture;
 @property (weak, nonatomic) IBOutlet UIButton *nextPicBtn;
 @property (weak, nonatomic) IBOutlet UIButton *prevPicBtn;
 @property (weak, nonatomic) IBOutlet UILabel *testLabel;
 @property NSInteger currentImgIndeks;
-@property (weak, nonatomic) IBOutlet UIImageView *bigPicture;
 
 - (void) mysetRAID:(NSString *)temp;
 
