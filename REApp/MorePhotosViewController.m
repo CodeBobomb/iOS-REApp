@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     REA *r = [REA initREA];
  //   RealEstate *ra = [r findRealEstate:self.raID];
-    NSArray *tempImgs = [[NSArray alloc ] initWithObjects: @"img1.png", @"img2.png", @"img3.png", nil];
+    NSArray *tempImgs = [[NSArray alloc ] initWithObjects: @"img1.png", @"img2.jpg", @"img3.png", nil];
     self.bigPicture.image = [UIImage imageNamed:[tempImgs objectAtIndex:0]];
     self.currentImgIndeks = 0;
 }
@@ -32,14 +32,14 @@
 
 - (IBAction)nextBtnClick:(id)sender {
     
-    NSArray *tempImgs = [[NSArray alloc ] initWithObjects: @"img1.png", @"img2.png", @"img3.jpg", nil];
+    NSArray *tempImgs = [[NSArray alloc ] initWithObjects: @"img1.png", @"img2.jpg", @"img3.jpg", nil];
     NSInteger nextIndex = (self.currentImgIndeks + 1) % tempImgs.count;
     self.bigPicture.image = [UIImage imageNamed:[tempImgs objectAtIndex:nextIndex] ];
     self.currentImgIndeks = nextIndex;
 }
 - (IBAction)prevBtnClick:(id)sender {
     //tempImgs = ra.pics
-    NSArray *tempImgs = [[NSArray alloc ] initWithObjects: @"img1.png", @"img2.png", @"img3.jpg", nil];
+    NSArray *tempImgs = [[NSArray alloc ] initWithObjects: @"img1.png", @"img2.jpg", @"img3.jpg", nil];
     NSInteger nextIndex = (self.currentImgIndeks - 1) % tempImgs.count;
     if (self.currentImgIndeks == 1) {
         nextIndex = 0;
