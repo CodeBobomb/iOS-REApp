@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Client.h"
+
 
 @interface ListTableViewController : UITableViewController
-
+-(void) mySetClient:(Client* )c;
 @end

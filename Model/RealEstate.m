@@ -19,4 +19,11 @@
 }
 
 
+-(id) initWithId:(NSString* ) reid andWithPics:(NSArray *) pics{
+    self=[super init];
+    pics=[[NSArray alloc] initWithArray:pics];
+    
+    return self;
+}
+
 @end

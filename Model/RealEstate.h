@@ -12,6 +12,7 @@
 
 
 -(id) initWithPics:(NSArray* )pics;
+-(id) initWithId:(NSString* ) reid andWithPics:(NSArray *) pics;
 
 @property NSString* desc;
 @property NSArray* pics;
