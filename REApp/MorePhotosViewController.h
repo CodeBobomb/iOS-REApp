@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *prevPicBtn;
 @property (weak, nonatomic) IBOutlet UILabel *testLabel;
 @property NSInteger currentImgIndeks;
+@property (weak, nonatomic) IBOutlet UIButton *n;
+@property (weak, nonatomic) IBOutlet UIButton *p;
+@property (weak, nonatomic) IBOutlet UIImageView *pb;
 
 - (void) mysetRAID:(NSString *)temp;
 

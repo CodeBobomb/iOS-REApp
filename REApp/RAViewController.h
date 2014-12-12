@@ -10,5 +10,9 @@
 
 @interface RAViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *morePhotosBtn;
+@property NSString* REID;
+
+- (void) mysetRAID:(NSString *)REID;
+
 
 @end

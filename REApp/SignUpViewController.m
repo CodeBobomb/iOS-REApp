@@ -7,7 +7,8 @@
 //
 
 #import "SignUpViewController.h"
-
+#import "Client.h"
+#import "REA.h"
 @interface SignUpViewController ()
 
 @end
@@ -22,8 +23,25 @@ NSString *email;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-
+    
 }
+
+-(BOOL) ValidEmail:(NSString *)checkString
+{
+    BOOL stricterFilter = NO; // Discussion http://blog.logichigh.com/2010/09/02/validating-an-e-mail-address/
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
+} /*- (BOOL) validateEmail: (NSString *) candidate {
+   NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Z0-9a-z._%+-]+[.][A-Z0-9a-z._%+-]+";
+   NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+   
+   
+   return [emailTest evaluateWithObject:candidate];
+   }*/
+
 - (IBAction)OkClicked:(id)sender {
     username = self.UsernameTxt.text;
     pass = self.EnterPassTxt.text;
@@ -31,28 +49,66 @@ NSString *email;
     email=self.EmailTxt.text;
     
     //if(email containsString:@"@")
-    NSString *regEx = [NSString stringWithFormat:@"*@*"];
-    NSRange range = [email rangeOfString:regEx options:NSRegularExpressionSearch];
-    if (range.location == NSNotFound) {
-        //NSMessagePort *poruka;
-        //poruka.
+    /*   NSString *regEx = [NSString stringWithFormat:@"*@*"];
+     NSRange range = [email rangeOfString:regEx options:NSRegularExpressionSearch];
+     if (range.location != NSNotFound) {
+     //NSMessagePort *poruka;
+     //poruka.
+     
+     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Popunite sve podatke ispravno!" message:@"" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
+     [alert show];
+     alert = nil;
+     [self.EmailTxt becomeFirstResponder];
+     
+     
+     } */
+    //  [self.UsernameTxt becomeFirstResponder];
+    
+    BOOL ispravnostEmaila=[self ValidEmail:email];
+    
+    if(ispravnostEmaila == YES && [pass isEqualToString:rpass]  && username !=nil && ![pass isEqualToString:@""])
+    {[self performSegueWithIdentifier:@"OkClick" sender:self];}
+    
+    
+    else if([username isEqualToString:@""])
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Popunite username polje ispravno!" message:@"" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
+        [alert show];
+        alert = nil;
+        [self.UsernameTxt becomeFirstResponder];
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Popunite sve podatke ispravno!" message:@"" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
+    }
+    
+    
+    
+    else if(ispravnostEmaila == NO ){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Popunite email polje ispravno!" message:@"" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
         [alert show];
         alert = nil;
         [self.EmailTxt becomeFirstResponder];
         
-        
-
     }
-    else [self performSegueWithIdentifier:@"OkClick" sender:self];
     
+    else if(![pass isEqualToString:rpass] || [pass isEqualToString:@""])
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Popunite password polje ispravno!" message:@"" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
+        [alert show];
+        alert = nil;
+        [self.EnterPassTxt becomeFirstResponder];
+        
+    }
+    
+    
+}
+- (IBAction)test:(id)sender {
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqual: @"OkClick"]) {
-        
-       
+        NSString* ajdi=[[NSString alloc] initWithFormat:@"%ld",(long)[[REA initREA] numberOfClients]];
+        Client *novi=[[Client alloc] initWithUser:username withPass:pass andID:ajdi ];
+        [[REA initREA] addClient:novi];
+                      
         
         
     }
@@ -67,13 +123,12 @@ NSString *email;
 //-(IBAction)OkBtnClicked:(id)sender
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

@@ -10,6 +10,7 @@
 #import "REA.h"
 #import "User.h"
 #import "Client.h"
+#import "ListTableViewController.h"
 
 @interface LoginViewController ()
 
@@ -21,12 +22,17 @@ NSString* username;
 NSString* password;
 bool checkpass = NO;
 double chrabl;
-Client* klijent2;
+Client* client;
 REA* r2;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    r2=[REA initREA];
     
-
+    [r2 addClient:[[Client alloc] initWithUser:@"Musa" withPass:@"Test" andID:@"0"]];
+    RealEstate* re=[[RealEstate alloc] initWithId:@"0" andWithPics:[[NSArray alloc] initWithObjects:@"pic1",@"pic2",@"pic3", nil]];
+    re.desc=@"RealEstate 01";
+    [r2 addRealEstates:re];
+    
     // Do any additional setup after loading the view. or not
 }
 
@@ -45,12 +51,12 @@ REA* r2;
     //klijent2=klijent1;
     if([rea findClientByName:username]!=nil )
     {
-        User *checkUser = [rea findClientByName:username];
-    checkpass = [checkUser checkPassword:password];
+        client = [rea findClientByName:username];
+        checkpass = [client checkPassword:password];
         chrabl=checkpass;
         
     }
- // if(checkpass==YES)
+    // if(checkpass==YES)
     [self performSegueWithIdentifier:@"showItems" sender:self];
 }
 
@@ -58,22 +64,24 @@ REA* r2;
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqual: @"showItems"]) {
         
-        Client* c1=[r2 findClientByName:username];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:([r2 findClientByName:username].password)  message:@"" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
-        [alert show];
-       
+        ListTableViewController* controller = (ListTableViewController*)[segue destinationViewController];
+        [controller mySetClient:client];
+        /*Client* c1=[r2 findClientByName:username];
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:([r2 findClientByName:username].password)  message:@"" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:nil];
+         [alert show];*/
+        
         
     }
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

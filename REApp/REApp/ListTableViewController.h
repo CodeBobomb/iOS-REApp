@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ListTableViewController : UITableViewController
-
+-(void) mySetClient:(Client* )c;
 @end

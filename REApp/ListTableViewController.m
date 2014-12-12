@@ -10,7 +10,8 @@
 #import "REA.h"
 #import "RealEstate.h"
 #import "MorePhotosViewController.h"
-#import "Client.h"
+#import "RAViewController.h"
+#import "Client.h"//-(void) mySetClient:(Client* )c
 @interface ListTableViewController ()
 -(void) mySetClient:(Client* )c;
 @end
@@ -53,16 +54,20 @@ Client* client;
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"showRE" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"itemRE"];
     
+    NSLog([[NSString alloc] initWithFormat:@"%d",indexPath.row]);
+    
+    NSInteger n=indexPath.row;
     cell.textLabel.text = [[REA initREA] findRealEstate:[[NSString alloc] initWithFormat:@"%ld",(long)indexPath.row]].desc;
     return cell;
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"showRE"]){
-        MorePhotosViewController* controller = (MorePhotosViewController*) [segue destinationViewController];
-        [controller mysetRAID: [[REA initREA] findRealEstate:@"1"].reID];
+
+        RAViewController* controller = (RAViewController*) [segue destinationViewController];
+        [controller mysetRAID: [[REA initREA] findRealEstate:[[NSString alloc] initWithFormat:@"%ld",[[self tableView] indexPathForSelectedRow].row]].reID];
     }
 }
 

@@ -43,6 +43,10 @@
 - (IBAction)makeAppoint:(id)sender {
 }
 
+- (void) mysetRAID:(NSString*)REID {
+    self.REID = REID;
+}
+
 /*
 #pragma mark - Navigation
 

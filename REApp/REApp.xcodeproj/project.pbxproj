@@ -25,6 +25,7 @@
 		E94939B11A3A1C5D0035BDCD /* ray.png in Resources */ = {isa = PBXBuildFile; fileRef = E94939B01A3A1C5D0035BDCD /* ray.png */; };
 		E94939B51A3A1F250035BDCD /* grey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E94939B41A3A1F250035BDCD /* grey.jpg */; };
 		E97B99071A3A00E20040C860 /* pozadinska.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E97B99061A3A00E20040C860 /* pozadinska.jpg */; };
+		E99007F21A3B54BF00A7BF4F /* RAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E99007F11A3B54BF00A7BF4F /* RAViewController.m */; };
 		E9C426F01A376E1300881577 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C426EF1A376E1300881577 /* img1.png */; };
 		E9C426F31A377C7500881577 /* img2.png in Resources */ = {isa = PBXBuildFile; fileRef = E9C426F11A377C7500881577 /* img2.png */; };
 		E9C426F41A377C7500881577 /* img3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9C426F21A377C7500881577 /* img3.jpg */; };
@@ -75,6 +76,8 @@
 		E94939B01A3A1C5D0035BDCD /* ray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ray.png; sourceTree = "<group>"; };
 		E94939B41A3A1F250035BDCD /* grey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grey.jpg; sourceTree = "<group>"; };
 		E97B99061A3A00E20040C860 /* pozadinska.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pozadinska.jpg; sourceTree = "<group>"; };
+		E99007F01A3B54BF00A7BF4F /* RAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAViewController.h; sourceTree = "<group>"; };
+		E99007F11A3B54BF00A7BF4F /* RAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAViewController.m; sourceTree = "<group>"; };
 		E9C426EF1A376E1300881577 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img1.png; path = ../img1.png; sourceTree = "<group>"; };
 		E9C426F11A377C7500881577 /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img2.png; path = ../img2.png; sourceTree = "<group>"; };
 		E9C426F21A377C7500881577 /* img3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = img3.jpg; path = ../img3.jpg; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 		E92B68E61A3596E40010733A = {
 			isa = PBXGroup;
 			children = (
+				E99007F01A3B54BF00A7BF4F /* RAViewController.h */,
+				E99007F11A3B54BF00A7BF4F /* RAViewController.m */,
 				E9FC8B4C1A38D04100EBE869 /* MorePhotosViewController.h */,
 				E9FC8B4D1A38D04100EBE869 /* MorePhotosViewController.m */,
 				E9FC8B491A38CB9200EBE869 /* ListTableViewController.h */,
@@ -314,6 +319,7 @@
 				E92B68FB1A3596E40010733A /* REApp.xcdatamodeld in Sources */,
 				E946B43E1A38C54B007BBF62 /* SignUpViewController.m in Sources */,
 				E91CE8651A362DE7003F9A16 /* Client.m in Sources */,
+				E99007F21A3B54BF00A7BF4F /* RAViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

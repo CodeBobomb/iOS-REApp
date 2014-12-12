@@ -81,7 +81,7 @@ NSMutableArray* realestates;
 -(RealEstate*) findRealEstate:(NSString*) reID{
     RealEstate* re=nil;
     for(int i=0;i<[realestates count];i++)
-        if(((RealEstate*)[realestates objectAtIndex:i]).reID == reID)
+        if([((RealEstate*)[realestates objectAtIndex:i]).reID isEqualToString:reID])
             re=(RealEstate*)[realestates objectAtIndex:i];
     return re;
 }

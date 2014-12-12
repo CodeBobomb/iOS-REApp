@@ -34,7 +34,7 @@
     
     NSArray *tempImgs = [[NSArray alloc ] initWithObjects: @"img1.png", @"img2.png", @"img3.jpg", nil];
     NSInteger nextIndex = (self.currentImgIndeks + 1) % tempImgs.count;
-    self.bigPicture.image = [UIImage imageNamed:[tempImgs objectAtIndex:nextIndex] ];
+    self.pb.image = [UIImage imageNamed:[tempImgs objectAtIndex:nextIndex] ];
     self.currentImgIndeks = nextIndex;
 }
 - (IBAction)prevBtnClick:(id)sender {
@@ -47,7 +47,7 @@
     if (self.currentImgIndeks == 0) {
         nextIndex = tempImgs.count -1;
     }
-    self.bigPicture.image = [UIImage imageNamed:[tempImgs objectAtIndex:nextIndex] ];
+    self.pb.image = [UIImage imageNamed:[tempImgs objectAtIndex:nextIndex] ];
     self.currentImgIndeks = nextIndex;
 }
 
